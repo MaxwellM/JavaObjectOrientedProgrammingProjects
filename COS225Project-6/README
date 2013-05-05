@@ -1,0 +1,22 @@
+- PROJECT6 - README
+- This project was created with the intent to create a TurtleWord that is filled with 300 Turtles that randomly move around and turn 30o right or left randomly. Then if they were to bump they will turn color and become ‘infected’, then after a certain amount of time become not ‘infected’.
+
+- We were also instructed to implement a wrap around function that will take our Turtles and if they were to be found out of bounds they would be converted to a coordinate that fell on the grid, kind of like PacMan.
+
+- We were also instructed to keep a strict architecture scheme that was presented to us in class concerning the requested layout letting us know what classes were suppose to talk to other classes. I did my best to follow the guidelines and keep within the specifications.
+
+- I profiled my project and made refinements based upon the suggestions of IntelliJ IDEA and removed any unused code. The simulation runs well for a minute, then the clockcycles start to cause a spike in temperature.
+
+- There is a counter on the button panel that displays the active number of ‘sick’ Turtles. Any level of sickness is counted, so yellow, pink, red, and black are counted. This is also updated once a loop.
+This project consisted of about 45+ hours of work.
+
+To play just run the TurtleTest class. This will produce a JPanel with a black grid with 300 BumpingTurtles randomly walking and turning 30o degrees and will bump into other Turtles and when that occurs that BumpingTurtle will turn a different color and slow down, depending on how many times they have bumped while being ‘infected’. There are two buttons, “start” and “reset”, and will perform the actions they are named after. This simulation also is set on a continuous loop.
+Here are the rules to the game:
+• If a turtle bumps it will turn color, which represents how ‘sick’ that Turtle is
+o Yellow = +250 time and -2 speed
+o Pink = +500 time and -4 speed
+o Red = +500 time and -5 speed
+o Black = +100 time for every ‘bump’ while ‘sick’
+• The time and speed changes are stacked, not reset when called.
+• Once the countDown reaches 0, the Turtle will reset to not ‘sick’ and has their
+  speed reset to 20 and color reset to white, the default settings.
