@@ -343,5 +343,4 @@ public class BumpingTurtle {
     public boolean getSick() {
         return this.sick;
     }
-
 }

@@ -48,7 +48,7 @@ public class TurtleTest {
      * @return The initial setup for the simulation to be tested
      */
     static JPanel newTurtleWorld() {
-        stats.setPreferredSize(new Dimension(80,25));
+        stats.setPreferredSize(new Dimension(450,25));
         stats.setLocation(10,10);
         JPanel wholePane = new JPanel();
         wholePane.setPreferredSize(new Dimension(700,700));

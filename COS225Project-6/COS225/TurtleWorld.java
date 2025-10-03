@@ -58,13 +58,38 @@ public class TurtleWorld implements TurtleRecognizer, Iterable<BumpingTurtle> {
         }
         Iterable<BumpingTurtle> aTurtles = new ArrayList<BumpingTurtle>(bumpingTurtles);
         int numSick = 0;
+        int numYellowSick = 0;
+        int numPinkSick = 0;
+        int numRedSick = 0;
+        int numBlackSick = 0;
         for (BumpingTurtle t : aTurtles) {
             t.isSick();
             t.move(timediff);
             if (t.getSick()) {
                 numSick += 1;
             }
-            TurtleTest.stats.setText("Sick = " + numSick);
+            if (t.getColor().equals(Color.YELLOW)) {
+                numYellowSick += 1;
+            } else if (t.getColor().equals(Color.PINK)) {
+                numPinkSick += 1;
+            } else if (t.getColor().equals(Color.RED)) {
+                numRedSick += 1;
+            } else if (t.getColor().equals(Color.BLACK)) {
+                numBlackSick += 1;
+            }
+            
+            TurtleTest.stats.setText(
+                "Total Sick = " + 
+                numSick + 
+                " Yellow = " + 
+                numYellowSick +
+                " Pink = " +
+                numPinkSick +
+                " Red = " +
+                numRedSick +
+                " Black = " +
+                numBlackSick 
+                );
         }
     }
 
