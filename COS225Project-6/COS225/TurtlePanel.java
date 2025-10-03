@@ -32,7 +32,7 @@ public class TurtlePanel extends JPanel {
         world.tick(timediff);
         prevTick = presTick;
         g.setColor(Color.darkGray);
-        g.fillRect(0,0,400,400);
+        g.fillRect(0,0,700,700);
 //        Dimension size = new Dimension(400, 400);
 
 //        for (int x = 0; x < world.getGrid().getWidth(); ++x) {

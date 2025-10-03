@@ -199,7 +199,7 @@ public class BumpingTurtle {
      * @param dist The distance to travel
      */
     public void fd(double dist) {
-        this.setPosition(Vector2d.wrapAround(Vector2d.add(this.position, this.heading, dist), new Vector2d(400.0, 400.0)));
+        this.setPosition(Vector2d.wrapAround(Vector2d.add(this.position, this.heading, dist), new Vector2d(700.0, 700.0)));
     }
 
     /**

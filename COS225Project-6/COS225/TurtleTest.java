@@ -51,14 +51,14 @@ public class TurtleTest {
         stats.setPreferredSize(new Dimension(80,25));
         stats.setLocation(10,10);
         JPanel wholePane = new JPanel();
-        wholePane.setPreferredSize(new Dimension(800,400));
+        wholePane.setPreferredSize(new Dimension(700,700));
         wholePane.setLayout(new BoxLayout(wholePane, BoxLayout.Y_AXIS));
         JPanel buttonPane = new JPanel();
-        JPanel worldPane = new JPanel(new GridLayout(1, 2));
+        JPanel worldPane = new JPanel(new GridLayout(1, 1));
 
         TurtleWorld w = new TurtleWorld();
         TurtlePanel p = new TurtlePanel(w);
-        p.setPreferredSize(new Dimension(400,400));
+        p.setPreferredSize(new Dimension(700,700));
         worldPane.add(p);
 
         buttonPane.add(stats);
@@ -68,10 +68,10 @@ public class TurtleTest {
         wholePane.add(worldPane);
         wholePane.add(buttonPane);
 
-        for (double x = 0.0; x < 300.0; ++x) {
+        for (double x = 0.0; x < 1000.0; ++x) {
             BumpingTurtle t = new BumpingTurtle();
             t.addDecorator(new TurtleDecorator());
-            t.setPosition(new Vector2d(Math.random() * 400.0, Math.random() * 400.0));
+            t.setPosition(new Vector2d(Math.random() * 700.0, Math.random() * 700.0));
             t.setHeading(new Heading(Heading.HeadingType.DEGREES, Math.random() * 360.0));
             w.addBumpingTurtle(t);
         }

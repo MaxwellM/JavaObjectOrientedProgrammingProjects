@@ -17,8 +17,8 @@ public class TurtleGrid {
         patchWidthSize = 10.0;
         patchHeightSize = 10.0;
 
-        horizontalNum = 40.0;
-        verticalNum = 40.0;
+        horizontalNum = 70.0;
+        verticalNum = 70.0;
 
         theGrid = new TurtlePatch[(int) horizontalNum][(int) verticalNum];            //The Grid. A digital frontier.
 
